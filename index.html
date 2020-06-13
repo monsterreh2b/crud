@@ -57,7 +57,7 @@ body, input{
 <script>
   
   var script_url = "https://script.google.com/macros/s/AKfycbxobFBgN5FTeUrEm1sHn0n21AtZMiHVcOd8B8oAXJ_kXNX14-VF/exec";
-  var x = 0;
+  // var x = 0;
   var resetButton = document.getElementById("id");
   // Make an AJAX call to Google Script
   function insert_value() {
@@ -67,7 +67,7 @@ body, input{
 	$('#mySpinner').addClass('spinner');
 
 // var id1=	$("#id").val();
-var id1=	x++;
+var id1=	$("#id").val();
 	var name= $("#name").val();
 	
 	
@@ -220,13 +220,14 @@ return resetButton;
 <body>
 <div align="center">
 <h1>Shopping List</h1> 
-<p>Build out your shopping list, and display what your current list is.</p>
-
+<p>Enter an ID # when adding an item.</p>
+<p>Click "show list" anytime to show the current list.</p>
+<p>Update current list/delete items by inputting the ID</p>
 
 <form >
 ID
 <input type = "text" name ="id" id="id">
-Name
+Item
 <input type = "text" name ="name" id="name">
 
 </form>
