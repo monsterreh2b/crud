@@ -62,12 +62,16 @@ body, input{
   // Make an AJAX call to Google Script
   function insert_value() {
     
-	$("#re").css("visibility","hidden");
-	 document.getElementById("loader").style.visibility = "visible";
-	$('#mySpinner').addClass('spinner');
+	
 
 // var id1=	$("#id").val();
 var id1=	$("#id").val();
+if (id1 == ""){
+  alert("please enter a unique ID value when adding an item");
+}else{
+  $("#re").css("visibility","hidden");
+	 document.getElementById("loader").style.visibility = "visible";
+	$('#mySpinner').addClass('spinner');
 	var name= $("#name").val();
 	
 	
@@ -82,7 +86,7 @@ var id1=	$("#id").val();
     });
 
    
-  
+}
   }
 
 
