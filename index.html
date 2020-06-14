@@ -29,7 +29,7 @@ body, input{
 
 input#id {
     position: relative;
-    left: 13px;
+    left: 28px;
 }
 
 #loader {
@@ -241,13 +241,7 @@ return resetButton;
     <p>Click "show list" anytime to show the current list.</p>
     <p>Update current list/delete items by inputting the ID.</p>
 
-    <form >
-    ID
-    <input type = "text" name ="id" id="id"><br>
-    Item
-    <input type = "text" name ="name" id="name">
-
-    </form>
+    
 
     <div id="loader"></div>
 
@@ -255,6 +249,13 @@ return resetButton;
 </div>
 <div class="display">
   <div class="left">
+    <form >
+    ID
+    <input type = "text" name ="id" id="id"><br>
+    Item
+    <input type = "text" name ="name" id="name">
+
+    </form>
     <input type = "button"  id = "b1" onClick="insert_value();" value = "Add Item"></input>
     <input type="button" onclick="read_value()" value="Show List" />
     <input type="button" onclick="update_value()" value="Update" />
