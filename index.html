@@ -19,10 +19,12 @@
 input#b1, input[type="button"] {
     height: 50;
     width: 190px;
+    display: block;
+    margin-bottom: 30px;
 }
 
 body, input{
-    font-size:30px;
+    font-size:35px;
 }
 
 #loader {
@@ -47,6 +49,10 @@ body, input{
   100% { transform: rotate(360deg); }
 }
 
+.display {
+    display: flex;
+    justify-content: space-around;
+}
 
 
 
@@ -223,32 +229,36 @@ return resetButton;
 </head>
 <body>
 <div align="center">
-<h1>Shopping List</h1> 
-<p>Enter an ID # when adding an item.</p>
-<p>Click "show list" anytime to show the current list.</p>
-<p>Update current list/delete items by inputting the ID.</p>
+    <h1>Shopping List</h1> 
+    <p>Enter an ID # when adding an item.</p>
+    <p>Click "show list" anytime to show the current list.</p>
+    <p>Update current list/delete items by inputting the ID.</p>
 
-<form >
-ID
-<input type = "text" name ="id" id="id">
-Item
-<input type = "text" name ="name" id="name">
+    <form >
+    ID
+    <input type = "text" name ="id" id="id">
+    Item
+    <input type = "text" name ="name" id="name">
 
-</form>
+    </form>
 
-<div id="loader"></div>
+    <div id="loader"></div>
 
-<p id="re" ></p>
+    <p id="re" ></p>
+</div>
+<div class="display">
+  <div class="left">
+    <input type = "button"  id = "b1" onClick="insert_value();" value = "Add Item"></input>
+    <input type="button" onclick="read_value()" value="Show List" />
+    <input type="button" onclick="update_value()" value="Update" />
+    <input type="button" onclick="delete_value()" value="Delete" />
+  </div>
 
-<input type = "button"  id = "b1" onClick="insert_value();" value = "Add Item"></input>
-<input type="button" onclick="read_value()" value="Show List" />
-<input type="button" onclick="update_value()" value="Update" />
-<input type="button" onclick="delete_value()" value="Delete" />
-
-<div id="showData"></div>
+  <div id="showData"></div>
+</div>
 </div>
 </body>
 <div align="center">
 
-</div>
+
 <html>
