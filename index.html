@@ -225,6 +225,7 @@ $.getJSON(url, function (json) {
         divContainer.appendChild(table);
 		document.getElementById("loader").style.visibility = "hidden";
 		$("#re").css("visibility","visible");
+    $("#re").css("text-align","center");
     });
 	}
   
@@ -249,7 +250,7 @@ return resetButton;
 
     <div id="loader"></div>
 
-    <p id="re" ></p>
+    
 </div>
 
 <div class="display">
@@ -269,6 +270,8 @@ return resetButton;
     <input type="button" onclick="read_value()" value="Show List" />
     <input type="button" onclick="update_value()" value="Update" />
     <input type="button" onclick="delete_value()" value="Delete" />
+    <br>
+    <p id="re" ></p>
   </div>
 
   <div id="showData"></div>
