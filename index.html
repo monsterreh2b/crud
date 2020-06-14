@@ -203,7 +203,7 @@ $.getJSON(url, function (json) {
 		var cell2 = row.insertCell(1);
 	
 		cell1.innerHTML = "<b>ID</b>";
-		cell2.innerHTML = "<b>Name</b>";
+		cell2.innerHTML = "<b>Item</b>";
         
         // ADD JSON DATA TO THE TABLE AS ROWS.
         for (var i = 0; i < json.records.length; i++) {
@@ -255,7 +255,7 @@ return resetButton;
 <div class="display">
   <div class="left">
     <h1>Shopping List</h1> 
-    <p>Enter an ID # when adding an item.</p>
+    <p>Enter a unique ID# when adding an item (e.g. 1, 2, 3).</p>
     <p>Click "show list" anytime to show the current list.</p>
     <p>Update current list/delete items by inputting the ID.</p>
     <form >
