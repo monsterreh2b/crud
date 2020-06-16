@@ -56,6 +56,7 @@ img#madd {
 }
 }
 
+
 input#b1, input[type="button"] {
  height: 80px;
     width: 265px;
@@ -77,6 +78,8 @@ input#id {
 input#name {
     margin-right: 36px;
 }
+
+
 
 #loader {
   border: 16px solid #f3f3f3;
@@ -120,7 +123,7 @@ form {
 .instruc {
     position: relative;
     left: 141px;
-    top: -61px;
+    top: -34px;
     width: 91%;
 }
 div#showData {
@@ -129,7 +132,10 @@ div#showData {
     right: 58px;
     /* width: 60px; */
 }
-
+input.input2 {
+    position: relative;
+    left: 142px;
+}
 		
     </style>
 
@@ -329,10 +335,10 @@ return resetButton;
     <!-- <div class="top"><img alt="" id="jacob" src="jacob.jpg"><img alt="" id="logo" src="grocery-list2.jpg"></div> -->
     
     
-    <input type = "button"  id = "b1" onClick="insert_value();" value = "Add Item"></input>
-    <input type="button" onclick="read_value()" value="Show List" />
-    <input type="button" onclick="update_value()" value="Update" />
-    <input type="button" onclick="delete_value()" value="Delete" />
+    <input type = "button"  id = "b1" class="input2" onClick="insert_value();" value = "Add Item"></input>
+    <input type="button" class="input2" onclick="read_value()" value="Show List" />
+    <input type="button" class="input2" onclick="update_value()" value="Update" />
+    <input type="button" class="input2" onclick="delete_value()" value="Delete" />
     <br>
     <p id="re" ></p>
     <div class="instruc">
