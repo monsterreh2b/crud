@@ -16,6 +16,25 @@ img#jacob {
     top: 23px;
 }
 
+.nav {
+    text-align: center;
+    position: relative;
+    top: -60px;
+    margin-bottom: 17px;
+}
+
+img#madd {
+    height: 142px;
+    position: relative;
+    top: 23px;
+    right: 10px;
+}
+
+.top {
+    position: relative;
+    top: -12px;
+}
+
 
         table, th, td 
         {
@@ -76,12 +95,16 @@ input#id {
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: -106px;
+    top: -140px;
 }
 .left {
     width: 45%;
     position: relative;
     top: -48px;
+}
+
+form {
+    margin-top: 20px;
 }
 
 
@@ -259,6 +282,15 @@ return resetButton;
   
 </head>
 <body>
+  <div class="nav"><div class="top"><img alt="" id="jacob" src="jacob.jpg"><img alt="" id="logo" src="grocery-list2.jpg"><img alt="" id="madd" src="madd.jpg"></div>
+  <form>
+    ID
+    <input type="text" name="id" id="id"><br>
+    Item
+    <input type="text" name="name" id="name">
+
+    </form>
+</div>
 <div align="center">
     
 
@@ -272,23 +304,19 @@ return resetButton;
 <div class="display">
   <div class="left">
    
-    <div class="top"><img alt="" id="jacob" src="jacob.jpg"><img alt="" id="logo" src="grocery-list2.jpg"></div>
-    <p>Enter a unique ID# when adding an item (e.g. 1, 2, 3).</p>
-    <p>Click "show list" anytime to show the current list.</p>
-    <p>Update current list/delete items by inputting the ID.</p>
-    <form >
-    ID
-    <input type = "text" name ="id" id="id"><br>
-    Item
-    <input type = "text" name ="name" id="name">
-
-    </form>
+    <!-- <div class="top"><img alt="" id="jacob" src="jacob.jpg"><img alt="" id="logo" src="grocery-list2.jpg"></div> -->
+    
+    
     <input type = "button"  id = "b1" onClick="insert_value();" value = "Add Item"></input>
     <input type="button" onclick="read_value()" value="Show List" />
     <input type="button" onclick="update_value()" value="Update" />
     <input type="button" onclick="delete_value()" value="Delete" />
     <br>
     <p id="re" ></p>
+    <p>Instructions:</p>
+<p>Enter a unique ID# when adding an item (e.g. 1, 2, 3).</p>
+    <p>Click "show list" anytime to show the current list.</p>
+    <p>Update current list/delete items by inputting the ID.</p>
   </div>
 
   <div id="showData"></div>
