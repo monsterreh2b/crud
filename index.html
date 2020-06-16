@@ -55,8 +55,8 @@ img#madd {
 }
 
 input#b1, input[type="button"] {
-    height: 70;
-    width: 230px;
+ height: 80px;
+    width: 265px;
     display: block;
     margin-bottom: 30px;
     margin-left: 147px;
@@ -107,13 +107,19 @@ input#name {
 .left {
     width: 45%;
     position: relative;
-    top: -48px;
+    top: -25px;
+    right: 150px;
 }
 
 form {
     margin-top: 20px;
 }
 
+.instruc {
+    position: relative;
+    left: 141px;
+    top: -61px;
+}
 
 		
     </style>
@@ -320,10 +326,13 @@ return resetButton;
     <input type="button" onclick="delete_value()" value="Delete" />
     <br>
     <p id="re" ></p>
+    <div class="instruc">
+
     <p>Instructions:</p>
 <p>Enter a unique ID# when adding an item (e.g. 1, 2, 3).</p>
     <p>Click "show list" anytime to show the current list.</p>
     <p>Update current list/delete items by inputting the ID.</p>
+    </div>
   </div>
 
   <div id="showData"></div>
