@@ -104,10 +104,12 @@ input#name {
 }
 
 .display {
-    display: flex;
+    /* display: flex; */
+    margin-top: 12%;
     justify-content: space-around;
     position: relative;
-    top: -140px;
+    top: -62%;
+    left: 30%;
 }
 .left {
     width: 45%;
@@ -120,11 +122,19 @@ form {
     margin-top: 20px;
 }
 
-.instruc {
+div#instruc {
     position: relative;
     left: 141px;
     top: -34px;
     width: 91%;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 24px;
+    padding-right: 24px;
+    display:none;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border-radius: 49px;
 }
 div#showData {
     position: relative;
@@ -135,6 +145,33 @@ div#showData {
 input.input2 {
     position: relative;
     left: 142px;
+}
+
+img.icon {
+    width: 125px;
+    position: absolute;
+    left: 3px;
+    top: 85px;
+}
+
+button {
+        position: fixed;
+    top: 180px;
+    left: -7px;
+    height: 154px;
+    width: 57px;
+    border: 2px solid black;
+    font-size: 46px;
+    font-style: italic;
+    font-family: serif;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.25);
+}
+.menu {
+    /* text-align: center; */
+    position: relative;
+    right: 15%;
+    display: flex;
+    justify-content: space-around;
 }
 		
     </style>
@@ -206,7 +243,14 @@ var id1=	$("#id").val();
   }
 
   
- 
+ function myFunction() {
+  var x = document.getElementById("instruc");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
   
   
   function delete_value(){
@@ -318,6 +362,10 @@ return resetButton;
     <input type="text" name="name" id="name">
 
     </form>
+    <div class="menu"><input type="button" id="b1" class="input2" onclick="insert_value();" value="Add Item">
+    <input type="button" class="input2" onclick="read_value()" value="Show List">
+    <input type="button" class="input2" onclick="update_value()" value="Update">
+    <input type="button" class="input2" onclick="delete_value()" value="Delete"></div>
 </div>
 <div align="center">
     
@@ -335,13 +383,11 @@ return resetButton;
     <!-- <div class="top"><img alt="" id="jacob" src="jacob.jpg"><img alt="" id="logo" src="grocery-list2.jpg"></div> -->
     
     
-    <input type = "button"  id = "b1" class="input2" onClick="insert_value();" value = "Add Item"></input>
-    <input type="button" class="input2" onclick="read_value()" value="Show List" />
-    <input type="button" class="input2" onclick="update_value()" value="Update" />
-    <input type="button" class="input2" onclick="delete_value()" value="Delete" />
+   
     <br>
     <p id="re" ></p>
-    <div class="instruc">
+   <button onclick="myFunction()">i</button>
+    <div id="instruc">
 
     <p>Instructions:</p>
 <p>Enter a unique ID# when adding an item (e.g. 1, 2, 3).</p>
